@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Casa en A-Frame</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Definir los assets -->
+      <a-assets>
+        <!-- Importar el modelo .obj -->
+        <a-asset-item id="modelo-casa" src="practicando.obj"></a-asset-item>
+      </a-assets>
+
+      <!-- Mostrar el modelo -->
+      <a-entity
+        obj-model="obj: #modelo-casa"
+        position="0 0 0"
+        scale="1 1 1"
+        rotation="0 0 0">
+      </a-entity>
+
+      <!-- Cámara -->
+      <a-camera position="0 1.6 5"></a-camera>
+
+      <!-- Luz -->
+      <a-light type="ambient" color="#888"></a-light>
+      <a-light type="directional" position="1 1 0"></a-light>
+    </a-scene>
+  </body>
+</html>
