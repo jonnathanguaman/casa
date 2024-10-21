@@ -12,13 +12,14 @@
       <a-assets>
         <!-- Importar el modelo .obj -->
         <a-asset-item id="modelo-casa" src="practicando.obj"></a-asset-item>
+        <!-- Importar el archivo .mtl si tienes materiales -->
+        <a-asset-item id="material-casa" src="practicando.mtl"></a-asset-item>
       </a-assets>
 
       <a-sky color="#87CEEB"></a-sky> <!-- Un color azul claro -->
-
       <!-- Mostrar el modelo -->
       <a-entity
-        obj-model="obj: #modelo-casa"
+        obj-model="obj: #modelo-casa; mtl: #material-casa"
         position="0 0 0"
         scale="1 1 1"
         rotation="0 0 0">
